@@ -29,37 +29,78 @@
       <p id="currentDay" class="lead"></p>
     </header>
     <div class="container">
-      <!-- Timeblocks go here -->
-      <!--put in rows 9am to 5 pm-->
+      
       <!--look up resource used on last one about inserting tags into lists. Also look at the edit project.-->
       <!-- look at timer to see a delayed java/ jQuery but it has to be based on time of day-->
-        <div id="row">
-            <li class="list-group-item list-group-item-success">09 A.M.</li>
+      <!--set up colomns tohave a time and an edit section-->
+       
+
+        <div class="list-group">
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="9">
+                    <li class="list-group-item list-group-item-success">09:00 A.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="10">
+                    <li class="list-group-item list-group-item-success">10:00 A.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="11">
+                    <li class="list-group-item list-group-item-success">11:00 A.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="12">
+                    <li class="list-group-item list-group-item-success">12:00 P.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="1">
+                    <li class="list-group-item list-group-item-success">1:00 P.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="2">
+                    <li class="list-group-item list-group-item-success">2:00 P.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="3">
+                    <li class="list-group-item list-group-item-success">3:00 P.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="4">
+                    <li class="list-group-item list-group-item-success">4:00 P.M.</li>
+                </div>
+            </button>
+            <button type="button" class="list-group-item list-group-item-action">
+                <div id="5">
+                    <li class="list-group-item list-group-item-success">5:00 P.M.</li>
+                </div>
+            </button>
         </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">10 A.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">11 A.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">12 P.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">01 P.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">02 P.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">03 P.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">04 P.M.</li>
-        </div>
-        <div id="row">
-            <li class="list-group-item list-group-item-success">05 P.M.</li>
-        </div>
+        <div id="modal-container" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                  <span class="close">&times;</span>
+                  <h2 id="modal-name">
+                  </h2>
+                </div>
+                <div class="modal-body">
+                  <h3>
+                    Description:
+                  </h3>
+                  <textarea id="description" cols="30" rows="10"></textarea>
+                  <div>
+                    <button id="save">Save</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
     
       
@@ -67,5 +108,6 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
