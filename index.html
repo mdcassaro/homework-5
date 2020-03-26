@@ -108,6 +108,73 @@
 
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
-    <script src="script.js"></script>
+    <script>
+        var modalEl = $("#modal-container");
+        var modalNameEl = $("#modal-name");
+        var descriptionEl = $("#description");
+        var closeEl = $(".close");
+        var saveBtn = $("#save");
+        var nameEl = $("#name");
+
+        var slot9 = $("#9")
+        var slot10 = $("#10")
+        var slot11 = $("#11")
+        var slot12 = $("#12")
+        var slot1 = $("#1")
+        var slot2 = $("#2")
+        var slot3 = $("#3")
+        var slot4 = $("#4")
+        var slot5 = $("#5")
+
+        var buttons = $("button")
+
+
+
+        var times = [slot9, slot10, slot11, slot12, slot1, slot2, slot3, slot4, slot5]
+
+        $(buttons).on("click", function(event){
+            event.preventDefault();
+            console.log("it worked")
+
+
+        })
+
+
+
+
+        // //cods for modal container opening
+        // function handleClick(event) {
+        //     if (event.target.matches($("list-group-item list-group-item-action"))) {
+        //     //if tbis button is clicked
+        //     event.preventDefault();
+        //     //prevents the name from being removed
+        //     modalEl.style.display = "block";
+        //     currentId = parseInt(event.target.parentElement.id);
+        //     var name = todo.name;
+        //     var description = toDo.description;
+        //     modalNameEl.textContent = name;
+        //     if(description) {
+        //         descriptionEl.value = description;
+        //     } else {
+        //         descriptionEl.value = "";
+        //     }
+        //     }
+        // }
+        // function close() {
+        //     modalEl.style.display = "none";
+        // }
+
+        
+        // //codes save button
+        // closeEl.on("click", close);
+        // saveBtn.on("click", function(event) {
+        //     event.preventDefault();
+        //     people[currentId].description = descriptionEl.value;
+        //     close();
+        // });
+       
+
+
+    </script>
   </body>
 </html>
