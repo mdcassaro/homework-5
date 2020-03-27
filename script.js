@@ -1,9 +1,4 @@
 
-// var modalEl = document.querySelector("#modal-container");
-// var modalNameEl = document.querySelector("#modal-name");
-// var descriptionEl = document.querySelector("#description");
-// var closeEl = document.querySelector(".close");
-// var saveBtn = document.querySelector("#save");
 
 var text9 = $("#text9").val().trim();
 var text10 = $("#text10").val().trim();
@@ -15,7 +10,7 @@ var text3 = $("#text3").val().trim();
 var text4 = $("#text4").val().trim();
 var text5 = $("#text5").val().trim();
 
-// var texts = [text9, text10, text11, text12, text1, text2, text3, text4, text5]
+
 
 var NowMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
 var eDisplayMoment = document.getElementById('currentDay');
