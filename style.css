@@ -76,4 +76,14 @@ body {
      color: aquamarine;
      
  }
-  
+
+ .past{
+     color: grey;
+ }
+ .now{
+     color: blue;
+ }
+ .future{
+     color: green;
+ }
+

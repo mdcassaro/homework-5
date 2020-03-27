@@ -21,116 +21,140 @@ var NowMoment = moment().format('MMMM Do YYYY, h:mm:ss a');
 var eDisplayMoment = document.getElementById('currentDay');
 eDisplayMoment.innerHTML = NowMoment;
 
+var currentTime = moment().format('H');
+currentTime = parseInt(currentTime);
+
+var time9 = $("#9").text;
+time9 = parseInt(time9[0]);
+
+
+var time10 = $("#10").text;
+time10 = parseInt(time10[0]);
+var text10 = document.querySelector("text10");
+
+var time11 = $("#11").text;
+time11 = parseInt(time11[0]);
+var text11 = $("text11");
+
+var time12 = $("12").text;
+time12 = parseInt(time12[0]);
+
+var time1 = $("1").text;
+time1 = parseInt(time1[0]);
+
+
+var time2 = $("2").text;
+time2 = parseInt(time10[0]);
+
+
+var time3 =$("3").text;
+time3 = parseInt(time3[0]);
+
+
+var time4 = $("4").text;
+time4 = parseInt(time4[0]);
+
+
+var time5 = $("5").text;
+time5 = parseInt(time5[0]);
 
 
 
 
-
-// var toDo = [slot9, slot10, slot11, slot12, slot1, slot2, slot3, slot4, slot5]
-
-
-
-
-
-// var modalEl = $("#modal-container");
-// var modalNameEl = $("#modal-name");
-// var descriptionEl = $("#description");
-// var closeEl = $(".close");
-// var saveBtn = $("#save");
-// var nameEl = $("#name");
-
-// var slot9 = $("#9")
-// var slot10 = $("#10")
-// var slot11 = $("#11")
-// var slot12 = $("#12")
-// var slot1 = $("#1")
-// var slot2 = $("#2")
-// var slot3 = $("#3")
-// var slot4 = $("#4")
-// var slot5 = $("#5")
-
-
-
-
-
-
-
-function storeTodos9() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos9", JSON.stringify(text9));
-}
-function storeTodos10() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos10", JSON.stringify(text10));
-}
-function storeTodos11() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos11", JSON.stringify(text11));
-}
-function storeTodos12() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos12", JSON.stringify(text12));
-}
-function storeTodos1() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos1", JSON.stringify(text1));
-}
-function storeTodos2() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos2", JSON.stringify(text2));
-}
-function storeTodos3() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos3", JSON.stringify(text3));
-}
-function storeTodos4() {
-    // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos4", JSON.stringify(text4));
-}
-function storeTodos5() {
-        // Stringify and set "todos" key in localStorage to todos array
-    localStorage.setItem("todos5", JSON.stringify(text5));
-}
-
-function init() {
-    alert("2nd button works")
-    
-    var storedTodos = JSON.parse(localStorage.getItem("todos"));
-    
-  
-    // If todos were retrieved from localStorage, update the todos array to it
-    if (storedTodos !== null) {
-      texts = storedTodos;
+var times  = [time9, time10, time11, time12, time1, time2, time3, time4, time5];
+var texts = [text9, text10, text11, text12, text1, text2, text3, text4, text5];
+function colorChange() {
+    for (i = 0; i < times.length; i ++) {
+        if (times[i] < currentTime) {
+            texts[i].addClass("past");
+        }
+        else if (times[i] === currentTime) {
+            texts[i].addClass("now");
+        }
+        else if (times[i] > currentTime){
+            texts[i].addClass("future");
+        }
     }
 }
-$("button").on("click", function(event){
-    event.preventDefault();
-
-    alert("button worked");
-
-    storeTodos9();
-    storeTodos10();
-    storeTodos11();
-    storeTodos12();
-    storeTodos1();
-    storeTodos2();
-    storeTodos3();
-    storeTodos4();
-    storeTodos5();
-
-
-  
-})
-
-
-  
-    // Render todos to the DOM
+colorChange();
 
 
 
 
 
-// renderTodos();
+$("#btn9").on("click", function(){
+    var todo = $("#text9").val().trim();
+    localStorage.setItem("9:00 A.M.", todo);
+
+});
+$(text9).val(localStorage.getItem("9:00 A.M."))
+
+$("#btn10").on("click", function(){
+    var todo = $("#text10").val().trim();
+    localStorage.setItem("10:00 A.M.", todo);
+
+});
+$(text10).val(localStorage.getItem("10:00 A.M."))
+
+$("#btn11").on("click", function(){
+    var todo = $("#text11").val().trim();
+    localStorage.setItem("11:00 A.M.", todo);
+
+});
+$(text11).val(localStorage.getItem("11:00 A.M."))
+
+$("#btn12").on("click", function(){
+    var todo = $("#text12").val().trim();
+    localStorage.setItem("12:00 A.M.", todo);
+
+});
+$(text12).val(localStorage.getItem("12:00 A.M."))
+
+$("#btn1").on("click", function(){
+    var todo = $("#text1").val().trim();
+    localStorage.setItem("1:00 P.M.", todo);
+
+});
+$(text1).val(localStorage.getItem("1:00 P.M."))
+
+$("#btn2").on("click", function(){
+    var todo = $("#text2").val().trim();
+    localStorage.setItem("2:00 P.M.", todo);
+
+});
+$(text2).val(localStorage.getItem("2:00 P.M."))
+
+$("#btn3").on("click", function(){
+    var todo = $("#text3").val().trim();
+    localStorage.setItem("3:00 P.M.", todo);
+
+});
+$(text3).val(localStorage.getItem("3:00 P.M."))
+
+$("#btn4").on("click", function(){
+    var todo = $("#text4").val().trim();
+    localStorage.setItem("4:00 P.M.", todo);
+
+});
+$(text4).val(localStorage.getItem("4:00 P.M."))
+
+$("#btn5").on("click", function(){
+    var todo = $("#text5").val().trim();
+    localStorage.setItem("5:00 P.M.", todo);
+
+});
+$(text5).val(localStorage.getItem("5:00 P.M."))
+
+
+
+
+
+
+
+
+
+
+
 
 
 
